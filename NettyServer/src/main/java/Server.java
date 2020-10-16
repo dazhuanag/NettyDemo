@@ -69,14 +69,14 @@ public class Server {
             //绑定绑定并侦听某个端口
             ChannelFuture future = server.bind().sync();
             System.out.println("server started and listen " + port);
-
-            msgJson.put("code",100001);
-            dataJson.put("appName","bankmeet.apk");
-            dataJson.put("versionCode",2);
-            dataJson.put("downloadUrl","http://rjwlsy.top/DownloadFile/app-release.apk");
-            msgJson.put("versionInfo",dataJson);
-            String versionInfo = JSON.toJSONString(msgJson);
-            System.out.println("versionInfo: "+versionInfo);
+//
+//            msgJson.put("code",100001);
+//            dataJson.put("appName","bankmeet.apk");
+//            dataJson.put("versionCode",2);
+//            dataJson.put("downloadUrl","http://rjwlsy.top/DownloadFile/app-release.apk");
+//            msgJson.put("versionInfo",dataJson);
+//            String versionInfo = JSON.toJSONString(msgJson);
+//            System.out.println("versionInfo: "+versionInfo);
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();
